@@ -1,0 +1,8 @@
+<h1>Categories of food</h1>
+<ul>
+  <% @category.each do |cat| %>
+    <li>
+      <%= link_to cat.name, category_path(cat) %>
+    </li>
+  <% end %>
+</ul>
