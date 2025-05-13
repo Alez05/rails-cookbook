@@ -5,6 +5,7 @@
     <% @category.bookmarks.each do |bookmark|%>
       <li>
         <%= bookmark.recipe.name%>
+        <%= bookmark.comment%>
         <%= link_to "delte", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirmation: "Are you sure you want to delete this recipe?"}%>
       </li>
     <% end %>
