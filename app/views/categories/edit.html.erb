@@ -1,0 +1,9 @@
+<h1>Edit/ update page</h1>
+
+<%= simple_form_for @category do |f| %>
+  <%= f.text_field :name%>
+  <%= f.submit "Update"%>
+<% end %>
+
+
+<%= link_to "Back to Category", category_path(@category)%>
