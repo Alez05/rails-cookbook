@@ -11,7 +11,8 @@
   </head>
 
   <body>
-    <%= yield %>
     <%= render 'shared/navbar'%>
+    <%= render 'shared/hero' if current_page?(root_path) %>
+    <%= yield %>
   </body>
 </html>

@@ -1,9 +1,24 @@
-<h1>Edit/ update page</h1>
+<div class="container d-flex mt-5 justify-content-center">
+  <div class="card shadow-sm p-4 custom-edit">
+    <div class="card-body">
+      <h3 class="card-title mb-4 text-center">Edit the "<%= @category.name%>"" category</h3>
 
-<%= simple_form_for @category do |f| %>
-  <%= f.text_field :name%>
-  <%= f.submit "Update"%>
-<% end %>
+      <%= simple_form_for @category do |f| %>
+        <div class="mb-3">
+          <%= f.input :name, placeholder: "Insert a new name here", label: "New name" %>
+        </div>
 
+        <div class="mb-3">
+          <%= f.submit "Update", class: "btn btn-outline-danger"%>
+        </div>
 
-<%= link_to "Back to Category", category_path(@category)%>
+        <div class="d-grid w-50">
+          <%= link_to category_path(@category), class: "btn btn-outline-warning w-90" do %>
+            <i class="fa-solid fa-backward"></i>
+            <span>Back</span>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

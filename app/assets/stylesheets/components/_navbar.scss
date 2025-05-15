@@ -1,0 +1,62 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.navbar {
+  background-color: #d4d4d4;
+}
+
+.img-cat {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  max-width: 300px;
+}
+
+.overlay-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5); /* Optional for contrast */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.card-title{
+  text-align: center;
+  position: relative;
+  display: flex;
+}
+
+.costum-button {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+.btn-sm {
+  border-radius: 5px;
+}
+.btn-sm:hover {
+  background-color: #d4d4d4;
+}
+
+.custom-card {
+  border-radius: 10px;
+  max-width: 300px;
+}

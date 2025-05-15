@@ -1,19 +1,12 @@
-<div class="container p-1 d-flex flex-column">
-  <div class="d-flex jusity-content-between align-items-center">
+<div class="navbar d-flex justify-content-between align-items-center px-4">
+  <div>
     <%= link_to root_path do %>
-      <%= image_tag "cooking.png", alt: "Popcorn", class: "logo" %>
+      <%= image_tag( "cooking.png", alt: "Cooking", class: "logo") %>
     <% end %>
-    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span>
-        <i class="fa-solid fa-plus"></i>
-      </span>
-    </button>
   </div>
 
-  <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
-    <div class="d-flex flex-row justify-content-end gap-3 mt-2">
-      <%= link_to "My lists", root_path, class: "btn btn-primary" %>
-      <%= link_to "New list", new_category_path, class: "btn btn-success" %>
-    </div>
+  <div class="d-flex gap-2">
+    <%= link_to "Home", root_path, class: "btn btn-light btn-sm" %>
+    <%= link_to "New category", new_category_path, class: "btn btn-light btn-sm" %>
   </div>
 </div>

@@ -1,12 +1,26 @@
-<h1>Add a Recipe </h1>
+<div class="container mt-5 d-flex justify-content-center">
+  <div class="card shadow-sm p-4 custom-new">
+    <div class="card-body">
+      <h1 class="card-title mb-4 text-center">Add a recipe to "<%= @category.name%>"</h1>
+        <%= simple_form_for [@category, @bookmark] do |f| %>
+          <div class="mb-3">
+            <%= f.association :recipe, prompt: "Select a recipe", input_html: {class: "form-select form-select-sm"}%>
+          </div>
 
-<%= simple_form_for [@category, @bookmark] do |f| %>
-  <div>
-    <%= f.association :recipe, prompt: "Select a recipe"%>
-    <%= f.input :comment, placeholder: "Enter a comment about the dish"%>
-    <%= f.submit "Add Recipe to Category" %>
+          <div class="mb-3">
+            <%= f.input :comment, placeholder: "Your comment here..."%>
+          </div>
+
+          <div class="d-grid w-50">
+            <%= f.submit "Add Recipe to Category", class: "btn btn-warning" %>
+          </div>
+        <% end %>
+        <div class="pt-3">
+          <%= link_to category_path(@category), class: "btn btn-outline-success" do %>
+            <i class="fa-solid fa-backward"></i>
+            <span>Back to category</span>
+          <% end %>
+        </div>
+    </div>
   </div>
-
-<% end %>
-
-<%= link_to "Back to Category", category_path(@category) %>
+</div>

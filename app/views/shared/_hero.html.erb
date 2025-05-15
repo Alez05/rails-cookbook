@@ -1,0 +1,12 @@
+<section class="hero-container">
+  <% if defined?(@category) && @category&.photo&.attached? %>
+  <%= image_tag url_for(@category.photo), class: "hero-img" %>
+  <% else %>
+  <%= image_tag "finalf.png", class: "hero-img" %>
+  <% end %>
+
+  <div class="hero-section text-white">
+    <h1 class="hero-text">Cookbook</h1>
+    <p class="hero-pp">Save your favourite recipes</p>
+  </div>
+</section>

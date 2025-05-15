@@ -71,3 +71,5 @@ gem 'rails-controller-testing', group: [ :test ]
 gem 'ostruct'
 
 gem "dotenv-rails"
+gem "cloudinary"
+gem "activestorage-cloudinary-service"
